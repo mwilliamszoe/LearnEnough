@@ -1,13 +1,9 @@
 # Defines a Phrase class (inheriting from String).
-class Phrase < String
-
-    def processor(string)
-        string.downcase
-    end
+class String
 
     # Returns content for palindrome testing.
     def processed_content
-        processor(self)
+      self.downcase
     end
   
     # Returns true for a palindrome, false otherwise.
@@ -16,17 +12,21 @@ class Phrase < String
     end
   end
   
-  # Defines a translated Phrase.
-  class TranslatedPhrase < Phrase
-    attr_accessor :translation
+  # # Defines a translated Phrase.
+  # class TranslatedPhrase < Phrase
+  #   attr_accessor :translation
   
-    def initialize(content, translation)
-      super(content)
-      @translation = translation
-    end
+  #   def initialize(content, translation)
+  #     super(content)
+  #     @translation = translation
+  #   end
   
-    # Processes the translation for palindrome testing.
-    def processed_content
-      processor(translation)
-    end
-  end
+  #   # Processes the translation for palindrome testing.
+  #   def processed_content
+  #     processor(translation)
+  #   end
+  # end
+
+
+
+
