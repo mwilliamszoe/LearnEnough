@@ -1,16 +1,16 @@
 require "test_helper"
 
 class MwilliamszoePalindromeTest < Minitest::Test
-  # def test_that_it_has_a_version_number
-  #   refute_nil ::MwilliamszoePalindrome::VERSION
-  # end
+  def test_that_it_has_a_version_number
+    refute_nil ::MwilliamszoePalindrome::VERSION
+  end
 
-  # def test_it_does_something_useful
-  #   assert true
-  # end
+  def test_it_does_something_useful
+    assert true
+  end
 
   def test_non_palindrome
-    assert !"apple".palindrome?
+    refute "apple".palindrome?
   end
 
   def test_literal_palindrome
@@ -18,11 +18,12 @@ class MwilliamszoePalindromeTest < Minitest::Test
   end
 
   def test_mixed_case_palindrome
-    skip
+    assert "RaceCar".palindrome?
   end
 
   def test_palindrome_with_punctuation
-    skip
+    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
+
   end
 
 end
